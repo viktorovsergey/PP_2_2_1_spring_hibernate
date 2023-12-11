@@ -23,8 +23,7 @@ public class User {
    @Column (name = "carid")
    private int carid;
 
-   @OneToOne(cascade = CascadeType.ALL)
-   @JoinColumn(name = "carid", referencedColumnName = "id")
+   @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
    private Car car;
 
 

@@ -22,7 +22,8 @@ public class Car {
         @Column(name = "series")
         private int series;
         public Car() {}
-    @OneToOne(mappedBy = "car",cascade = CascadeType.ALL)
+    @OneToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
     public Car(String model, int series) {
