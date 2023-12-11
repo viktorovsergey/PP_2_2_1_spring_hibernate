@@ -25,17 +25,9 @@ public class Car {
     public Car() {
     }
 
-    @OneToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-
     public Car(String model, int series) {
         this.model = model;
         this.series = series;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public Long getId() {
@@ -64,9 +56,6 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "model='" + model + '\'' +
-                ", series=" + series +
-                '}';
+        return "Car{" + "model='" + model + '\'' + ", series=" + series + '}';
     }
 }
